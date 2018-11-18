@@ -20,7 +20,7 @@ def bot():
     # ข้อความที่ได้รับมา
     msg_in_json = request.get_json()
     msg_in_string = json.dumps(msg_in_json)
-    
+    print('dddd')
     # Token สำหรับตอบกลับ (จำเป็นต้องใช้ในการตอบกลับ)
     replyToken = msg_in_json["events"][0]['replyToken']
 
@@ -41,7 +41,7 @@ def reply(replyToken, textList):
     for text in textList:
         msgs.append({
             "type":"text",
-            "text":text
+            "text":'text'
         })
     data = json.dumps({
         "replyToken":replyToken,
